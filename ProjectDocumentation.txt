@@ -1,0 +1,117 @@
+You are a senior frontend developer. Build a complete modern website using Next.js (App Router) for a premium food brand concept similar to “Bhaap Re Bhaap” (zero-oil, steam-based healthy food).
+
+I will provide a logo. The entire website design (colors, theme, accents, gradients) MUST be derived from the logo.
+
+---
+
+### Tech Stack:
+- Next.js (latest, App Router)
+- SCSS / CSS Modules (NO Tailwind)
+- Fully responsive (mobile-first)
+- Clean, modern UI with smooth animations (use Framer Motion if needed)
+- No backend required (static demo site)
+
+---
+
+### IMPORTANT: Logo-Based Theme System
+- Extract primary, secondary, and accent colors from the logo
+- Use those colors consistently across:
+  - Navbar
+  - Buttons
+  - Background gradients
+  - Cards and highlights
+- Create a premium color palette based on the logo
+- Maintain strong contrast and readability
+- Use soft glow / gradient effects inspired by the logo style
+
+---
+
+### Website Goal:
+Create a high-converting landing page that:
+- Showcases the brand concept (zero oil / steam food)
+- Displays menu items
+- Encourages users to place orders via WhatsApp
+- Feels premium and startup-level
+
+---
+
+### Pages / Sections (Single Page Website):
+
+1. Hero Section:
+- Bold heading (e.g., “Healthy Food, Made with Steam – Zero Oil”)
+- Subheading
+- CTA button: “Order on WhatsApp”
+- Background gradient based on logo colors
+
+2. About / Concept Section:
+- Explain zero-oil steam concept
+- Highlight benefits (healthy, hygienic, protein-rich)
+
+3. Menu Section:
+- Grid layout
+- Food cards (image, name, price, description)
+- Styled using logo color palette
+
+4. Why Choose Us:
+- Icons + features (Zero Oil, Fresh Ingredients, Fast Service, Healthy Meals)
+
+5. Social Proof Section:
+- Testimonials / dummy reviews
+- Instagram-style preview section
+
+6. Location Section:
+- Google Maps embed placeholder
+- Address + timings
+
+7. CTA Section:
+- Strong call-to-action
+- WhatsApp button
+
+8. Footer:
+- Social links
+- Instagram link
+- Disclaimer: “This is a demo concept website”
+
+---
+
+### Important Features:
+- Sticky navbar
+- Smooth scrolling
+- WhatsApp button:
+  https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order
+- Mobile-first UI
+- Fast loading
+- Reusable components
+
+---
+
+### Folder Structure:
+- app/
+- components/
+- styles/
+
+---
+
+### Design Guidelines:
+- Premium startup look (similar to Zomato / Swiggy level)
+- Rounded cards
+- Soft shadows
+- Clean typography
+- Subtle animations
+- Use logo-inspired gradients and glow effects
+
+---
+
+### Output Required:
+- Full working Next.js project code
+- All components separated
+- SCSS styling included
+- Dummy menu data
+- Ready to deploy on Vercel
+
+---
+
+### Extra Instruction:
+Make the UI visually impressive so it can be used to pitch to a real client.
+
+Do NOT over-explain. Generate clean, production-ready code.

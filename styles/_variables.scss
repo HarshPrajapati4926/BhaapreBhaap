@@ -1,0 +1,57 @@
+// Theme-aware colour tokens (values live in globals.scss as CSS variables,
+// switched via <html data-theme="light|dark">). Palette derived from the logo.
+$black: var(--black);
+$espresso: var(--espresso);
+$brown-deep: var(--brown-deep);
+$brown: var(--brown);
+$brown-light: var(--brown-light);
+$amber: var(--amber);
+$orange: var(--orange);
+$orange-hot: var(--orange-hot);
+$cream: var(--cream);
+$cream-soft: var(--cream-soft);
+$leaf: var(--leaf);
+$on-leaf: var(--on-leaf);
+$text-muted: var(--text-muted);
+
+// Fixed (theme-independent) brand colours
+$ink: #140b06;
+$on-brand: #140b06;
+$brand-amber: #f5a623;
+$brand-orange: #ff8a00;
+$brand-hot: #ff6a00;
+
+$grad-brand: linear-gradient(135deg, $brand-amber 0%, $brand-orange 100%);
+$grad-leaf: linear-gradient(135deg, var(--leaf-a) 0%, var(--leaf-b) 100%);
+$grad-fire: linear-gradient(135deg, $brand-orange 0%, $brand-hot 100%);
+$grad-card: linear-gradient(160deg, rgba(var(--card-a-rgb), 0.92) 0%, rgba(var(--card-b-rgb), 0.96) 100%);
+
+$glow: 0 0 40px rgba(var(--amber-rgb), 0.3);
+$shadow-soft: 0 12px 40px rgba(var(--shadow-rgb), var(--shadow-a));
+
+$radius: 24px;
+$radius-sm: 14px;
+$container: 1180px;
+
+$bp-sm: 640px;
+$bp-md: 900px;
+$bp-lg: 1100px;
+
+@mixin up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: min(100% - 40px, $container);
+  margin-inline: auto;
+}
+
+@mixin section {
+  padding: 80px 0;
+  position: relative;
+  @include up($bp-md) {
+    padding: 120px 0;
+  }
+}

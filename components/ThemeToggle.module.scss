@@ -1,0 +1,50 @@
+@use '../styles/variables' as *;
+
+$size: 32px;
+
+.pill {
+  position: relative;
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(var(--cream-rgb), 0.06);
+  border: 1px solid rgba(var(--amber-rgb), 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $black;
+  box-shadow: 0 2px 8px rgba(var(--shadow-rgb), 0.35), 0 0 0 1px rgba(var(--amber-rgb), 0.35);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn {
+  position: relative;
+  z-index: 1;
+  width: $size;
+  height: $size;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: $text-muted;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $amber;
+  }
+  &.active {
+    color: $amber;
+  }
+  &:focus-visible {
+    outline: 2px solid $amber;
+    outline-offset: 2px;
+  }
+}

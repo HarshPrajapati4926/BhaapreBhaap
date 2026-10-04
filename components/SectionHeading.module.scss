@@ -1,0 +1,46 @@
+@use '../styles/variables' as *;
+
+.wrap {
+  margin-bottom: 56px;
+  max-width: 680px;
+}
+.center {
+  text-align: center;
+  margin-inline: auto;
+}
+.left {
+  text-align: left;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(var(--leaf-rgb), 0.12);
+  border: 1px solid rgba(var(--leaf-rgb), 0.4);
+  color: $leaf;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+
+.highlight {
+  background: $grad-brand;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin-top: 16px;
+  color: $text-muted;
+  font-size: 1.05rem;
+}

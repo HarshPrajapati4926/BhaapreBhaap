@@ -1,0 +1,73 @@
+// Dark is the default; light is applied via <html data-theme="light">.
+:root {
+  color-scheme: dark;
+  --black-rgb: 10, 6, 4;
+  --espresso-rgb: 26, 15, 8;
+  --brown-deep-rgb: 58, 28, 13;
+  --brown-rgb: 107, 58, 26;
+  --brown-light-rgb: 143, 84, 38;
+  --amber-rgb: 245, 166, 35;
+  --orange-rgb: 255, 138, 0;
+  --orange-hot-rgb: 255, 106, 0;
+  --cream-rgb: 255, 241, 208;
+  --cream-soft-rgb: 255, 226, 168;
+  --text-muted-rgb: 217, 191, 154;
+  --card-a-rgb: 58, 28, 13;
+  --card-b-rgb: 26, 15, 8;
+  --shadow-rgb: 0, 0, 0;
+  --shadow-a: 0.45;
+  --leaf-rgb: 245, 166, 35;
+  --leaf-a: #f5a623;
+  --leaf-b: #ff8a00;
+  --on-leaf: #140b06;
+
+  --logo-blend: normal;
+  --logo-bg: transparent;
+  --logo-radius: 0;
+  --logo-mask: none;
+  --map-filter: invert(0.9) hue-rotate(180deg) saturate(0.7) sepia(0.3);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --black-rgb: 251, 253, 246;
+  --espresso-rgb: 239, 247, 228;
+  --brown-deep-rgb: 223, 238, 207;
+  --brown-rgb: 196, 224, 172;
+  --brown-light-rgb: 150, 196, 120;
+  --amber-rgb: 214, 112, 0;
+  --orange-rgb: 232, 108, 0;
+  --orange-hot-rgb: 218, 88, 0;
+  --cream-rgb: 24, 44, 26;
+  --cream-soft-rgb: 44, 74, 40;
+  --text-muted-rgb: 84, 106, 78;
+  --card-a-rgb: 255, 255, 255;
+  --card-b-rgb: 243, 250, 234;
+  --shadow-rgb: 40, 90, 40;
+  --shadow-a: 0.16;
+  --leaf-rgb: 46, 125, 50;
+  --leaf-a: #4caf50;
+  --leaf-b: #2e7d32;
+  --on-leaf: #ffffff;
+
+  --logo-blend: normal;
+  --logo-bg: transparent;
+  --logo-radius: 0;
+  --logo-mask: none;
+  --map-filter: none;
+}
+
+:root {
+  --black: rgb(var(--black-rgb));
+  --espresso: rgb(var(--espresso-rgb));
+  --brown-deep: rgb(var(--brown-deep-rgb));
+  --brown: rgb(var(--brown-rgb));
+  --brown-light: rgb(var(--brown-light-rgb));
+  --amber: rgb(var(--amber-rgb));
+  --orange: rgb(var(--orange-rgb));
+  --orange-hot: rgb(var(--orange-hot-rgb));
+  --cream: rgb(var(--cream-rgb));
+  --cream-soft: rgb(var(--cream-soft-rgb));
+  --text-muted: rgb(var(--text-muted-rgb));
+  --leaf: rgb(var(--leaf-rgb));
+}

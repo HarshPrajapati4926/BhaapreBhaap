@@ -1,0 +1,66 @@
+@use '../styles/variables' as *;
+
+.menu {
+  @include section;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(var(--brown-rgb), 0.4), transparent 60%),
+    $black;
+}
+
+.container {
+  @include container;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 40px;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @include up($bp-sm) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.tab {
+  flex-shrink: 0;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: rgba(var(--cream-rgb), 0.05);
+  border: 1.5px solid rgba(var(--amber-rgb), 0.3);
+  color: $cream-soft;
+  font-weight: 500;
+  transition: all 0.25s ease;
+
+  &:hover {
+    border-color: $amber;
+  }
+  &.active {
+    background: $grad-brand;
+    color: $on-brand;
+    border-color: transparent;
+    box-shadow: 0 6px 22px rgba(var(--orange-rgb), 0.4);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+
+  @include up($bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include up($bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  > div {
+    height: 100%;
+  }
+}

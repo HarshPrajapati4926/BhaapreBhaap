@@ -1,0 +1,78 @@
+@use '../styles/variables' as *;
+
+.footer {
+  background: $espresso;
+  border-top: 1px solid rgba(var(--amber-rgb), 0.2);
+  padding: 60px 0 28px;
+}
+
+.container {
+  @include container;
+}
+
+.top {
+  display: grid;
+  gap: 36px;
+  @include up($bp-md) {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+
+.brand {
+  img {
+    width: 180px;
+    mix-blend-mode: var(--logo-blend);
+    background: var(--logo-bg);
+    border-radius: var(--logo-radius);
+  }
+  p {
+    margin-top: 10px;
+    color: $text-muted;
+    max-width: 320px;
+  }
+}
+
+.links {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.links a,
+.social a {
+  color: $cream-soft;
+  transition: color 0.2s;
+  &:hover {
+    color: $amber;
+  }
+}
+
+.social {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.bottom {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(var(--amber-rgb), 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: $text-muted;
+}
+
+.disclaimer {
+  color: $amber;
+  font-weight: 600;
+}

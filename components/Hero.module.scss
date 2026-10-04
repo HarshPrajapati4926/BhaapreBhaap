@@ -1,0 +1,132 @@
+@use '../styles/variables' as *;
+
+.hero {
+  position: relative;
+  padding: 96px 0 56px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(var(--brown-rgb), 0.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 90%, rgba(var(--orange-rgb), 0.16) 0%, transparent 50%),
+    linear-gradient(180deg, $black 0%, $espresso 100%);
+
+  @include up($bp-md) {
+    padding: 104px 0 72px;
+  }
+}
+
+.glow,
+.glow2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+.glow {
+  width: 420px;
+  height: 420px;
+  background: rgba(var(--orange-rgb), 0.25);
+  top: -80px;
+  right: -80px;
+}
+.glow2 {
+  width: 340px;
+  height: 340px;
+  background: rgba(var(--leaf-rgb), 0.2);
+  bottom: -60px;
+  left: -60px;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.banner {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 24px, 1500px);
+  margin-inline: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0a0604;
+  box-shadow: $shadow-soft, 0 0 60px rgba(var(--orange-rgb), 0.28);
+  border: 1px solid rgba(var(--amber-rgb), 0.35);
+
+  @include up($bp-md) {
+    border-radius: 32px;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// Matches the position of the baked-in WhatsApp button (about 4.5-32% x 84.5-94%)
+.hotspot {
+  position: absolute;
+  left: 4.4%;
+  top: 84.4%;
+  width: 27.8%;
+  height: 9.9%;
+  border-radius: 999px;
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 3px rgba(var(--orange-rgb), 0.7), 0 0 30px rgba(var(--orange-rgb), 0.6);
+    outline: none;
+  }
+}
+
+.below {
+  @include container;
+  position: relative;
+  z-index: 1;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+
+  @include up($bp-md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.stats {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+
+  li {
+    text-align: center;
+  }
+  strong {
+    display: block;
+    font-family: var(--font-display), sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: $leaf;
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+  span {
+    font-size: 0.85rem;
+    color: $text-muted;
+  }
+}

@@ -1,0 +1,60 @@
+@use '../styles/variables' as *;
+
+.why {
+  @include section;
+  background: linear-gradient(180deg, $black 0%, $brown-deep 100%);
+}
+
+.container {
+  @include container;
+}
+
+.grid {
+  display: grid;
+  gap: 22px;
+  @include up($bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include up($bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  text-align: center;
+  padding: 36px 24px;
+  border-radius: $radius;
+  background: rgba(var(--black-rgb), 0.45);
+  border: 1px solid rgba(var(--amber-rgb), 0.2);
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    border-color: $amber;
+    box-shadow: $glow;
+  }
+  h3 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 20px 0 8px;
+    color: $leaf;
+  }
+  p {
+    color: $text-muted;
+    font-size: 0.95rem;
+  }
+}
+
+.icon {
+  width: 78px;
+  height: 78px;
+  margin-inline: auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: $on-leaf;
+  background: $grad-leaf;
+  box-shadow: 0 8px 28px rgba(var(--leaf-rgb), 0.45);
+}

@@ -1,0 +1,61 @@
+@use '../styles/variables' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.02);
+  }
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+.primary {
+  background: $grad-brand;
+  color: $on-brand;
+  box-shadow: 0 8px 30px rgba(var(--orange-rgb), 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.5) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+  }
+  &:hover {
+    box-shadow: 0 12px 40px rgba(var(--orange-rgb), 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    &::after {
+      transform: translateX(120%);
+    }
+  }
+}
+
+.ghost {
+  background: rgba(var(--cream-rgb), 0.06);
+  color: $cream;
+  border: 1.5px solid rgba(var(--amber-rgb), 0.5);
+  backdrop-filter: blur(8px);
+
+  &:hover {
+    background: rgba(var(--amber-rgb), 0.15);
+    border-color: $amber;
+  }
+}
+
+.dark {
+  background: $ink;
+  color: $brand-amber;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
